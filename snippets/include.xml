@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="aosPB"
+           fetch="https://github.com/aosp-pb"
+           revision="refs/heads/fifteen" />
+
+  <remote  name="clarencelol-gitea"
+           fetch="https://gitea.com/clarencelol"
+           revision="refs/heads/15" />
+
+  <!-- aospb additions -->
+  <!-- manifest -->
+  <project path="manifest" name="manifest" remote="aospb" />
+
+  <!-- legacy -->
+  <project path="external/tinyxml" name="platform/external/tinyxml" groups="pdk" remote="aosp" revision="refs/tags/android-11.0.0_r46" />
+
+  <!-- general -->
+  <project path="art" name="art" remote="aospb" />
+  <project path="bionic" name="bionic" remote="aospb" />
+  <project path="development" name="development" groups="developers,pdk-cw-fs,pdk-fs" remote="aospb" />
+
+  <!-- bootable -->
+  <project path="bootable/recovery" name="bootable_recovery" remote="aospb" />
+  <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" remote="aospb" />
+
+  <!-- build -->
+  <project path="build/make" name="build" groups="pdk" remote="aospb" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/blueprint" name="build_blueprint" groups="pdk,tradefed" remote="aospb" />
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="aospb" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- device -->
+  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="aospb" />
+
+  <!-- external -->
+  <project path="external/dtc" name="external_dtc" remote="aospb" />
+  <project path="external/e2fsprogs" name="external_e2fsprogs" remote="aospb" />
+  <project path="external/gptfdisk" name="external_gptfdisk" remote="aospb" />
+  <project path="external/mksh" name="external_mksh" remote="aospb" />
+  <project path="external/skia" name="external_skia" groups="pdk,qcom_msm8x26" remote="aospb" />
+  <project path="external/zstd" name="external_zstd" groups="pdk" remote="aospb" />
+
+  <!-- frameworks -->
+  <project path="frameworks/av" name="frameworks_av" remote="aospb" />
+  <project path="frameworks/base" name="frameworks_base" remote="aospb" />
+  <project path="frameworks/native" name="frameworks_native" remote="aospb" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="aospb" />
+
+  <!-- hardware -->
+  <project path="hardware/google/pixel" name="hardware_google_pixel" remote="aospb" />
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="aospb" />
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="aospb" />
+  <project path="hardware/lineage/compat" name="hardware_lineage_compat" remote="aospb" />
+  <project path="hardware/lineage/interfaces" name="hardware_lineage_interfaces" remote="aospb" />
+  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" remote="aospb" />
+
+  <!-- kernel -->
+  <project path="kernel/configs" name="kernel_configs" groups="vts,pdk" remote="aospb" />
+
+  <!-- packages -->
+  <project path="packages/apps/BtHelper" name="packages_apps_BtHelper" remote="aospb" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="aospb" />
+  <project path="packages/apps/Nfc" name="packages_apps_Nfc" groups="apps_nfc,pdk-fs,pdk-cw-fs" remote="aospb" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="aospb" />
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="aospb" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="aospb" />
+  <project path="packages/modules/Virtualization" name="packages_modules_Virtualization" groups="pdk" remote="aospb" />
+  <project path="packages/services/DeviceAsWebcam" name="packages_services_DeviceAsWebcam" groups="pdk-cw-fs,pdk-fs" remote="aospb" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="aospb" />
+
+  <!-- system -->
+  <project path="system/bpf" name="system_bpf" remote="aospb" />
+  <project path="system/core" name="system_core" remote="aospb" />
+  <project path="system/libhidl" name="system_libhidl" remote="aospb" />
+  <project path="system/security" name="system_security" remote="aospb" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="aospb" />
+  <project path="system/update_engine" name="system_update_engine" remote="aospb" />
+  <project path="system/vold" name="system_vold" remote="aospb" />
+
+  <!-- vendor -->
+  <project path="vendor/custom-preference" name="vendor_custom-preference" remote="aospb" />
+  <project path="vendor/gms" name="vendor_gms" remote="clarencelol-gitea" clone-depth="1" />
+  <project path="vendor/aosp" name="vendor_aosp" remote="aospb" />
+
+  <!-- CodeLinaro additions -->
+  <!-- hardware -->
+  <project path="hardware/qcom-caf/sdm845/audio" name="hardware_qcom_audio" groups="qcom,sdm845" remote="aospb" revision="15-caf-sdm845" />
+  <project path="hardware/qcom-caf/sdm845/display" name="hardware_qcom_display" groups="qcom" remote="aospb" revision="15-caf-sdm845" />
+  <project path="hardware/qcom-caf/sdm845/media" name="hardware_qcom_media" groups="qcom,sdm845" remote="aospb" revision="15-caf-sdm845" />
+  <project path="hardware/qcom-caf/sm8150/audio" name="hardware_qcom_audio" groups="qcom,msmnile" remote="aospb" revision="15-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8150/display" name="hardware_qcom_display" groups="qcom" remote="aospb" revision="15-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8150/media" name="hardware_qcom_media" groups="qcom,msmnile" remote="aospb" revision="15-caf-sm8150" />
+  <project path="hardware/qcom-caf/wlan" name="hardware_qcom_wlan" groups="qcom,kailua-vendor" remote="aospb" revision="15-caf" />
+
+  <!-- vendor -->
+  <project path="vendor/qcom/opensource/commonsys/fm" name="vendor_qcom_opensource_fm-commonsys" groups="qcom,qssi" remote="aospb" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um" name="vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,lahaina" remote="aospb" revision="15-caf-legacy-um" />
+  <project path="vendor/qcom/opensource/usb" name="vendor_qcom_opensource_usb" groups="qcom,kailua-vendor" remote="aospb" />
+
+</manifest>
