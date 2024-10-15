@@ -36,7 +36,7 @@
 
   <!-- Frameworks Repos -->
   <project path="frameworks/av" name="frameworks_av" remote="aospb" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="aospb" />
+  <project path="frameworks/base" name="frameworks_base" remote="aospb" />
   <project path="frameworks/native" name="frameworks_native" remote="aospb" />
 
   <!-- GMS -->
@@ -51,7 +51,6 @@
   <project path="hardware/lineage/compat" name="hardware_lineage_compat" remote="aospb" />
   
   <!-- CAF Repos -->
-  <project path="hardware/qcom-caf/wlan" name="hardware_qcom-caf_wlan" groups="qcom,kailua-vendor" remote="aospb" />
   <project path="hardware/qcom-caf/sm8150/audio" name="hardware_qcom-caf_sm8150_audio" groups="qcom,msmnile" remote="aospb" />
   <project path="hardware/qcom-caf/sm8150/display" name="hardware_qcom-caf_sm8150_display" groups="qcom" remote="aospb" />
   <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um" name="vendor_qcom_opensource_data-ipa-cfg-mgr-legacy-um" groups="qcom,lahaina" remote="aospb" />
