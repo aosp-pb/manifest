@@ -66,6 +66,7 @@
   <!-- Vendor Repos -->
   <project path="vendor/aosp" name="vendor_aosp" remote="aospb" />
   <project path="vendor/custom-preference" name="vendor_custom-preference" remote="aospb" />
+  <project path="vendor/extra" name="vendor_extra" remote="aospb" />
   <project path="vendor/qcom/opensource/commonsys/fm" name="vendor_qcom_opensource_fm-commonsys" groups="qcom,qssi" remote="aospb" />
 
   <!-- System Repos -->
