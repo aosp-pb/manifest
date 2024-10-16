@@ -9,6 +9,7 @@
           fetch="https://gitlab.com/" />
 
   <!-- General Repos -->
+  <project path="art" name="art" remote="aospb" />
   <project path="bootable/recovery" name="bootable_recovery" remote="aospb" />
   <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" remote="aospb" />
   <project path="manifest" name="manifest" remote="aospb" />
@@ -31,6 +32,7 @@
   </project>
 
   <!-- External Repos -->
+  <project path="external/libcxx" name="external_libcxx" remote="aospb" />
   <project path="external/libnl" name="external_libnl" remote="aospb" />
   <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" remote="aospb" />
 
@@ -64,6 +66,7 @@
   <!-- Vendor Repos -->
   <project path="vendor/aosp" name="vendor_aosp" remote="aospb" />
   <project path="vendor/custom-preference" name="vendor_custom-preference" remote="aospb" />
+  <project path="vendor/qcom/opensource/commonsys/fm" name="vendor_qcom_opensource_fm-commonsys" groups="qcom,qssi" remote="aospb" />
 
   <!-- System Repos -->
   <project path="system/core" name="system_core" remote="aospb" />
