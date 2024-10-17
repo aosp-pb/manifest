@@ -72,7 +72,6 @@
 
   <!-- Hardware -->
   <project path="hardware/libhardware" name="android_hardware_libhardware" groups="pdk" remote="lineage" />
-  <project path="hardware/xiaomi" name="android_hardware_xiaomi" revision="lineage-21" remote="lineage" />
 
   <!-- HALs -->
   <project path="hardware/qcom-caf/bootctrl" name="android_hardware_qcom_bootctrl" groups="qcom,waipio-vendor" revision="lineage-22.0-caf" remote="lineage" />
