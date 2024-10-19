@@ -8,6 +8,10 @@
   <remote name="gitlab"
           fetch="https://gitlab.com/" />
 
+  <remote  name="clarencelol-gitea"
+           fetch="https://gitea.com/clarencelol"
+           revision="refs/heads/15" />
+
   <!-- General Repos -->
   <project path="art" name="art" remote="aospb" />
   <project path="bootable/recovery" name="bootable_recovery" remote="aospb" />
@@ -42,7 +46,7 @@
   <project path="frameworks/native" name="frameworks_native" remote="aospb" />
 
   <!-- GMS -->
-  <project path="vendor/gms" name="rayavanindra/vendor_gms" remote="gitlab" revision="15" clone-depth="1" />
+  <project path="vendor/gms" name="android_vendor_gms" remote="clarencelol-gitea" clone-depth="1" />
   
   <!-- Hardware Repos -->
   <project path="hardware/google/pixel" name="hardware_google_pixel" remote="aospb" />
