@@ -2,7 +2,7 @@
 <manifest>
 
   <remote name="aospb"
-          fetch="ssh://git@github.com/aosp-pb/"
+          fetch="https://github.com/aosp-pb/"
           revision="15"  />
   
   <remote name="gitlab"
